@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/background.webp);
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.offers-header {
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  justify-content: space-between;
+}
+
+.offers-header .back-button {
+  background: none;
+  border: none;
+  color: #FF1E1E;
+  font-size: 1.5rem;
+  margin-right: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.offers-header h2 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Offers */
+.offers-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.offer-card {
+  background: #F5f5f5;
+  border-radius: 16px;
+  overflow: hidden;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.offer-info {
+  padding: 16px;
+}
+
+.offer-info h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.offer-info p {
+  font-size: 0.85rem;
+  color: black;
+  margin-bottom: 12px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Cantidad (+ y -) */
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 1rem;
+  background: #FF1E1E;
+  color: white;
+  cursor: pointer;
+  border: 2px solid orange;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.qty button:hover {
+  background: #FF1E1E;
+  color: white;
+}
+
+.qty span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Footer fijo */
+.cart-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #F5f5f5;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  z-index: 100;
+}
+
+.cart-footer span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.cart-footer .pay {
+  background: #FF1E1E;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.3s ease;
+}
+
+.cart-footer .pay:hover {
+  background: black;
+}
+
+
+/* Responsive */
+@media (min-width: 768px) {
+  .offers-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .offer-card {
+    flex: 0 0 calc(33.333% - 20px);
+    margin: 10px;
+  }
+
+  .offer-card img {
+    height: 200px;
+  }
+}

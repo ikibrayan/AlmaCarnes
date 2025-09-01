@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ofertas</title>
+  <link rel="stylesheet" href="./css/offers.css" />
+  <!-- Iconos de Font Awesome (para el ícono de WhatsApp) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <div class="offers-header">
+    <a href="./select.html" class="back-button">←</a>
+    <h2>OFERTAS</h2>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="offers-container">
+    <!-- Oferta 1 -->
+    <div class="offer-card">
+      <img src="./img/offer-carne.webp" alt="Oferta Carne">
+      <div class="offer-info">
+        <h3>Combo Parrillero</h3>
+        <p>500g de res + 500g de chorizo</p>
+        <div class="price-row">
+          <span class="price" data-price="29900">$29.900</span>
+          <div class="qty">
+            <button class="menos" data-id="offer_parrillero">−</button>
+            <span id="cant_offer_parrillero">0</span>
+            <button class="mas" data-id="offer_parrillero">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Oferta 2 -->
+    <div class="offer-card">
+      <img src="./img/offer-pollo.webp" alt="Oferta Pollo">
+      <div class="offer-info">
+        <h3>Combo Pollo Familiar</h3>
+        <p>1kg de muslos + 1kg de alas</p>
+        <div class="price-row">
+          <span class="price" data-price="24900">$24.900</span>
+          <div class="qty">
+            <button class="menos" data-id="offer_pollo">−</button>
+            <span id="cant_offer_pollo">0</span>
+            <button class="mas" data-id="offer_pollo">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <div class="cart-footer">
+    <span id="total-price">$0</span>
+    <button class="pay">Realizar Pedido <i class="fa-brands fa-whatsapp"></i></button>
+  </div>
+
+  <!-- Script -->
+  <script src="./js/offers.js"></script>
+</body>
+</html>

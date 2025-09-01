@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ubicación</title>
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/map.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="cart-header">
+    <a href="select.html" class="back-button">←</a>
+    <h2>UBICACIÓN</h2>
+  </div>
+
+  <!-- Contenedor del mapa -->
+  <div class="map-container">
+    <div class="map-title">Visualiza nuestra ubicación en el mapa</div>
+    <div id="map"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/map.js"></script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap">
+  </script>
+</body>
+</html>

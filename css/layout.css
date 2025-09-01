@@ -1,0 +1,38 @@
+header {
+  background-image: url('../img/banner.webp');
+  background-size: cover;            /* ocupa todo el ancho */
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 250px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+section {
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .producto {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .producto-img {
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    background-image: url('../img/banner.webp');
+    height: 300px;
+  }
+}
+  

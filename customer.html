@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datos del Cliente</title>
+  <link rel="stylesheet" href="./css/customer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="cart-header">
+    <a href="#" class="back-button" id="btn-back">←</a>
+    <h2>FORMULARIO</h2>
+  </div>
+
+  <!-- WRAPPER -->
+  <main class="form-wrapper">
+    
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="./img/logo.webp" alt="RapiBurger">
+    </div>
+
+    <!-- TÍTULO -->
+    <h3>Completa tu información</h3>
+
+    <!-- FORMULARIO -->
+    <div class="formulario">
+      <input type="text" id="nombre" placeholder="Tu nombre" required maxlength="60">
+      <input type="text" id="direccion" placeholder="Dirección de entrega" required maxlength="30">
+      <input type="tel" id="telefono" placeholder="Número de contacto" required>
+
+      <select id="entrega">
+        <option>Domicilio</option>
+        <option>Recoger</option>
+      </select>
+
+      <select id="pago">
+        <option>Pago online</option>
+        <option>Contra entrega</option>
+      </select>
+
+      <button class="enviar" onclick="finalizarPedido()">
+        Enviar pedido <i class="fa-brands fa-whatsapp"></i>
+      </button>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="./js/customer.js"></script>
+
+  <!-- Validación teléfono (máx. 10 dígitos) -->
+  <script>
+    const telefonoInput = document.getElementById("telefono");
+    telefonoInput.addEventListener("input", function () {
+      this.value = this.value.replace(/\D/g, ""); // solo números
+      if (this.value.length > 10) {
+        this.value = this.value.slice(0, 10);
+      }
+    });
+  </script>
+
+  <!-- Botón volver dinámico -->
+  <script>
+    document.getElementById("btn-back").addEventListener("click", function (e) {
+      e.preventDefault();
+      const referrer = document.referrer;
+      if (referrer && (referrer.includes("menu.html") || referrer.includes("offers.html"))) {
+        window.location.href = referrer;
+      } else {
+        window.location.href = "menu.html"; // fallback
+      }
+    });
+  </script>
+
+</body>
+</html>
