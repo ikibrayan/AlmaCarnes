@@ -4,6 +4,7 @@ function finalizarPedido() {
   const telefono = document.getElementById('telefono').value.trim();
   const entrega = document.getElementById('entrega').value;
   const pago = document.getElementById('pago').value;
+  const observaciones = document.getElementById('observaciones').value.trim(); // 🔹 Nuevo campo
 
   const urlParams = new URLSearchParams(window.location.search);
   const esOferta = urlParams.get('oferta') === 'true';
@@ -44,6 +45,11 @@ function finalizarPedido() {
   mensaje += `\n📞 Teléfono: ${telefono}`;
   mensaje += `\n🚚 Tipo de entrega: ${entrega}`;
   mensaje += `\n💳 Método de pago: ${pago}`;
+
+  // 🔹 Agregar observaciones si existen
+  if (observaciones) {
+    mensaje += `\n📝 Observaciones: ${observaciones}`;
+  }
 
   const numero = '3205510535'; // Reemplaza con el número real
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
